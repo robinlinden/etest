@@ -1,9 +1,9 @@
-#include "etest/etest.h"
+#include "etest/internal/test_suite.h"
 
 #include <iostream>
 #include <memory>
 
-namespace etest {
+namespace etest::internal {
 
 test_suite *test_suite::instance() {
     static test_suite suite;

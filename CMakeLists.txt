@@ -4,7 +4,13 @@ project(etest)
 
 add_library(${PROJECT_NAME}
     include/etest/etest.h
-    src/etest.cpp
+    include/etest/internal/macro_magic.h
+    include/etest/internal/test.h
+    include/etest/internal/test_factory.h
+    include/etest/internal/test_info.h
+    include/etest/internal/test_macros.h
+    include/etest/internal/test_suite.h
+    src/test_suite.cpp
 )
 
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
