@@ -1,5 +1,6 @@
 #include "etest/etest.h"
 
+#include <iostream>
 #include <memory>
 
 namespace etest {
@@ -16,14 +17,24 @@ test_suite::~test_suite() {
 }
 
 int test_suite::run() {
-    int result = 0;
-
+    std::vector<std::string> errors;
     for (const auto &info : info_) {
         std::unique_ptr<test> t{info->factory->make_test()};
-        result += t->run();
+        t->run();
+        if (t->failed_expectations.size() != 0) {
+            errors.reserve(errors.size() + t->failed_expectations.size());
+            errors.insert(
+                errors.end(),
+                t->failed_expectations.begin(),
+                t->failed_expectations.end());
+        }
     }
 
-    return result == 0 ? 0 : 1;
+    for (const auto &error : errors) {
+        std::cerr << error;
+    }
+
+    return errors.empty() ? 0 : 1;
 }
 
 const test_info *test_suite::add_test_info(test_info *info) {
