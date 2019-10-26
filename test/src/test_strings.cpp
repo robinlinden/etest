@@ -3,6 +3,6 @@
 #include <string>
 
 TEST(strings, can_be_tested) {
-    EXPECT_EQ(std::string("hello"), std::string("bye"));
-    EXPECT_EQ("hello", "hella");
+    EXPECT_EQ("hello", "hello");
+    EXPECT_EQ(std::string("bye"), std::string("bye"));
 }

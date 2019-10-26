@@ -14,7 +14,7 @@ TEST(airthmetic_types, can_be_tested) {
     EXPECT_EQ(0.f, 0.0);
     EXPECT_EQ(50, 10 * 5);
 
-    EXPECT_EQ(5, 100.f);
+    EXPECT_EQ(100, 100.f);
 
     double j = 10;
 

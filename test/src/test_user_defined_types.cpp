@@ -17,7 +17,7 @@ std::ostream &operator<<(std::ostream &os, const amazing& a) {
 
 TEST(user_defined_types, can_be_tested) {
     EXPECT_EQ(amazing{0}, amazing{0});
-    EXPECT_EQ(amazing{0}, amazing{1});
+    EXPECT_EQ(amazing{5}, amazing{5});
 }
 
 }
