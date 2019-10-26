@@ -3,9 +3,9 @@
 #include "etest/internal/test_macros.h"
 #include "etest/internal/test_suite.h"
 
-#include <string>
-
 namespace etest {
+
+void init_etest(int argc, char **argv);
 
 inline int run_all_tests() {
     return internal::test_suite::instance()->run();

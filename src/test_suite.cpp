@@ -18,7 +18,7 @@ test_suite::~test_suite() {
 
 int test_suite::run() {
     std::vector<std::string> errors;
-    for (const auto &info : info_) {
+    for (const auto *info : info_) {
         std::unique_ptr<test> t{info->factory->make_test()};
         t->run();
         if (t->failed_expectations.size() != 0) {
@@ -35,6 +35,15 @@ int test_suite::run() {
     }
 
     return errors.empty() ? 0 : 1;
+}
+
+std::vector<std::string> test_suite::list_tests() const {
+    std::vector<std::string> tests_names;
+    for (const auto *info : info_) {
+        tests_names.push_back(info->get_display_name());
+    }
+
+    return tests_names;
 }
 
 const test_info *test_suite::add_test_info(test_info *info) {

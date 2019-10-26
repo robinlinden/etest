@@ -18,6 +18,8 @@
     const etest::internal::test_info *ETEST_CAT3(test_group_name, test_name, holder) =\
         etest::internal::test_suite::instance()->add_test_info(\
             new etest::internal::test_info(\
+                ETEST_TOSTRING(test_group_name),\
+                ETEST_TOSTRING(test_name),\
                 new etest::internal::test_factory_impl<ETEST_CAT2(test_group_name, test_name)>));\
     \
     void ETEST_CAT2(test_group_name, test_name)::run()

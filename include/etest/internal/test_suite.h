@@ -11,6 +11,7 @@ public:
     static test_suite *instance();
 
     int run();
+    std::vector<std::string> list_tests() const;
     const test_info *add_test_info(test_info *info);
 
 private:
