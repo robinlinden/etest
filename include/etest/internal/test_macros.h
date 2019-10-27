@@ -9,8 +9,11 @@
 #define ETEST_TEST(test_group_name, test_name)\
     class ETEST_CAT2(test_group_name, test_name) : public etest::internal::test {\
     public:\
-        std::string name() override {\
-            return std::string(ETEST_TOSTRING(ETEST_CAT2(test_group_name, test_name)));\
+        std::string group() const override {\
+            return std::string(ETEST_TOSTRING(test_group_name));\
+        }\
+        std::string name() const override {\
+            return std::string(ETEST_TOSTRING(test_name));\
         }\
         void run() override;\
     };\

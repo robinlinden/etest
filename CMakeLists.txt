@@ -11,6 +11,7 @@ add_library(${PROJECT_NAME}
     include/etest/internal/test_macros.h
     include/etest/internal/test_suite.h
     src/etest.cpp
+    src/test.cpp
     src/test_info.cpp
     src/test_suite.cpp
 )
