@@ -2,7 +2,7 @@
 
 namespace {
 
-TEST(airthmetic_types, can_be_tested) {
+TEST(arithmetic_types, can_be_tested) {
     int i = 0;
 
     EXPECT_EQ(i, 0);
