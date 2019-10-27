@@ -11,9 +11,9 @@ add_library(${PROJECT_NAME}
     include/etest/internal/test_macros.h
     include/etest/internal/test_suite.h
     src/etest.cpp
-    src/test.cpp
-    src/test_info.cpp
-    src/test_suite.cpp
+    src/internal/test.cpp
+    src/internal/test_info.cpp
+    src/internal/test_suite.cpp
 )
 
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
