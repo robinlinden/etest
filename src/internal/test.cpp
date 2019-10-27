@@ -2,7 +2,13 @@
 
 #include <sstream>
 
-namespace etest::internal {
+namespace etest {
+
+void test::run() {
+    set_up();
+    test_body();
+    tear_down();
+}
 
 std::string test::display_name() const {
     std::stringstream ss;

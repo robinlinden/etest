@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-namespace etest::internal {
+namespace etest {
 
 class test {
 public:
@@ -12,8 +12,11 @@ public:
 
     virtual std::string group() const = 0;
     virtual std::string name() const = 0;
-    virtual void run() = 0;
+    virtual void set_up() {}
+    virtual void test_body() = 0;
+    virtual void tear_down() {}
 
+    void run();
     std::string display_name() const;
 
     template<typename T, typename U>
