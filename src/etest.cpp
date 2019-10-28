@@ -1,5 +1,7 @@
 #include "etest/etest.h"
 
+#include "etest/internal/test_suite.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -37,6 +39,10 @@ void init_etest(int argc, char **argv) {
             exit(0);
         }
     }
+}
+
+int run_all_tests() {
+    return internal::test_suite::instance()->run();
 }
 
 }
