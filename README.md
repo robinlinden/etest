@@ -49,8 +49,8 @@ struct amazing {
     int a;
 };
 
-bool operator!=(const amazing& lhs, const amazing& rhs) {
-    return lhs.a != rhs.a;
+bool operator==(const amazing& lhs, const amazing& rhs) {
+    return lhs.a == rhs.a;
 }
 
 std::ostream &operator<<(std::ostream &os, const amazing& a) {

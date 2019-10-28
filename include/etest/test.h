@@ -21,12 +21,13 @@ public:
 
     template<typename T, typename U>
     void EXPECT_EQ(const T &lhs, const U &rhs) {
-        if (lhs != rhs) {
-            std::stringstream ss;
-            ss << "Failed expectation in " << display_name()
-                << ": " << lhs << " == " << rhs << std::endl;
-            failed_expectations.push_back(ss.str());
+        if (lhs == rhs) {
+            return;
         }
+        std::stringstream ss;
+        ss << "Failed expectation in " << display_name()
+            << ": " << lhs << " == " << rhs << std::endl;
+        failed_expectations.push_back(ss.str());
     }
 
     std::vector<std::string> failed_expectations;
