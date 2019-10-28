@@ -1,7 +1,7 @@
 #pragma once
 
+#include "etest/test.h"
 #include "etest/internal/macro_magic.h"
-#include "etest/internal/test.h"
 #include "etest/internal/test_factory.h"
 #include "etest/internal/test_info.h"
 #include "etest/internal/test_suite.h"

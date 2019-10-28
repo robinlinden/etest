@@ -4,14 +4,14 @@ project(etest)
 
 add_library(${PROJECT_NAME}
     include/etest/etest.h
+    include/etest/test.h
     include/etest/internal/macro_magic.h
-    include/etest/internal/test.h
     include/etest/internal/test_factory.h
     include/etest/internal/test_info.h
     include/etest/internal/test_macros.h
     include/etest/internal/test_suite.h
     src/etest.cpp
-    src/internal/test.cpp
+    src/test.cpp
     src/internal/test_info.cpp
     src/internal/test_suite.cpp
 )

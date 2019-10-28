@@ -1,6 +1,6 @@
 #pragma once
 
-#include "etest/internal/test.h"
+#include "etest/test.h"
 
 namespace etest::internal {
 

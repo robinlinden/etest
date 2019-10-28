@@ -1,4 +1,4 @@
-#include "etest/internal/test.h"
+#include "etest/test.h"
 
 #include <sstream>
 

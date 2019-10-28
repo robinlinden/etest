@@ -1,8 +1,8 @@
 #pragma once
 
+#include "etest/test.h"
 #include "etest/internal/test_macros.h"
 #include "etest/internal/test_suite.h"
-#include "etest/internal/test.h"
 
 namespace etest {
 
